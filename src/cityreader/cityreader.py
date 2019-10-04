@@ -94,6 +94,7 @@ for c in cities:
 # lat1, lon1 = float(lalo1.split(",")[0]), float(lalo1.split(",")[1])
 # lat2, lon2 = float(lalo2.split(",")[0]), float(lalo2.split(",")[1])
 
+
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     # within will hold the cities that fall within the specified region
     within = []
@@ -107,8 +108,5 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
         if (c.lat > lat1) & (c.lat < lat2):
             if(c.lon > lon1) & (c.lon < lon2):
                 within.append(c)
-    # TODO Ensure that the lat and lon valuse are all floats
-    # Go through each city and check to see if it falls within
-    # the specified coordinates.
 
     return within
